@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Agrupamento em Classes</title>
+  </head>
+  <body>
+    <h1><br />Agrupamento em Classes</h1>
+    <br /><br />
+
+    <button id="alternarInstrucoes" class="botaoInstrucoes" aria-label="Mostrar/Ocultar Instruções"></button>
+    
+    <div id="instrucoes" class="instrucoes" style="display: none;">
+      <h3>Como Usar a Calculadora</h3>
+      <ol>
+        <li><strong>Selecione o Número de Classes:</strong> Escolha entre 3, 5 ou 7 classes.</li>
+        <li><strong>Preencha os Campos:</strong>
+          <ul>
+            <li><strong>Li:</strong> Digite o limite inferior da primeira classe (ex: 10)</li>
+            <li><strong>Amplitude:</strong> Digite a amplitude de cada classe (ex: 5)</li>
+            <li><strong>Fi:</strong> Digite as frequências separadas por vírgula (ex: 5,10,15)</li>
+          </ul>
+        </li>
+        <li><strong>Clique em Calcular:</strong> O botão será habilitado quando todos os campos estiverem preenchidos.</li>
+        <li><strong>Escolha a Operação:</strong> Clique em qualquer botão para ver o resultado específico.</li>
+      </ol>
+
+      <div class="exemplo">
+        <div class="tituloExemplo">Exemplo para 3 classes:</div>
+        Li: 10<br>
+        Amplitude: 5<br>
+        Fi: 5,10,15
+      </div>
+
+      <div class="exemplo">
+        <div class="tituloExemplo">Exemplo para 5 classes:</div>
+        Li: 20<br>
+        Amplitude: 4<br>
+        Fi: 8,12,15,10,5
+      </div>
+
+      <div class="exemplo">
+        <div class="tituloExemplo">Exemplo para 7 classes:</div>
+        Li: 30<br>
+        Amplitude: 3<br>
+        Fi: 6,9,12,15,10,8,4
+      </div>
+
+      <div class="nota">
+        Dica: As frequências (Fi) devem ser inseridas na mesma ordem das classes, da primeira até a última.
+      </div>
+    </div>
+
+    <div class="selecaoClasses">
+      <label for="numeroClasses">Número de Classes:</label>
+      <select id="numeroClasses" class="seletorClasses">
+        <option value="">Selecione</option>
+        <option value="3">3 Classes</option>
+        <option value="5">5 Classes</option>
+        <option value="7">7 Classes</option>
+      </select>
+    </div>
+    <div id="dados" style="display: none;">
+      <div class="grupoEntrada">
+        <label for="limiteInferior">Li</label>
+        <input type="number" id="limiteInferior" placeholder="Ex: 5" required />
+      </div>
+      <div class="grupoEntrada">
+        <label for="amplitude">Amplitude</label>
+        <input type="number" id="amplitude" placeholder="Ex: 3" required />
+      </div>
+      <div class="grupoEntrada">
+        <label for="frequencias">Fi</label>
+        <input type="text" id="frequencias" placeholder="Ex: 5,10,15" required />
+      </div>
+    </div>
+    <button id="calcular" class="botaoCalcular" disabled>Calcular</button>
+
+    <div id="operacoes" class="containerOperacoes" style="display: none;">
+      <button class="botaoOperacao">Todos</button>
+      <button class="botaoOperacao">Média</button>
+      <button class="botaoOperacao">Mediana</button>
+      <button class="botaoOperacao">Moda de Czuber</button>
+      <button class="botaoOperacao">Moda Bruta</button>
+      <button class="botaoOperacao">Variância</button>
+      <button class="botaoOperacao">Desvio Padrão</button>
+      <button class="botaoOperacao">Coeficiente de Variação</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
+
